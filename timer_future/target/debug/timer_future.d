@@ -1,0 +1,1 @@
+C:\Users\indra\advprog-tutorial1-timer\timer_future\target\debug\timer_future.exe: C:\Users\indra\advprog-tutorial1-timer\timer_future\src\lib.rs C:\Users\indra\advprog-tutorial1-timer\timer_future\src\main.rs
