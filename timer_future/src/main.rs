@@ -81,12 +81,26 @@ fn main() {
     let (executor, spawner) = new_executor_and_spawner();
 
     spawner.spawn(async {
-        println!("Tirta's Komputer: howdy!");
+        println!("Tirta's Komputer: howdy 1!");
         TimerFuture::new(Duration::new(2, 0)).await;
-        println!("Tirta's Komputer: done!");
+        println!("Tirta's Komputer: done 1!");
     });
 
-    drop(spawner);
+    spawner.spawn(async {
+        println!("Tirta's Komputer: howdy 2!");
+        TimerFuture::new(Duration::new(2, 0)).await;
+        println!("Tirta's Komputer: done 2!");
+    });
+
+    spawner.spawn(async {
+        println!("Tirta's Komputer: howdy 3!");
+        TimerFuture::new(Duration::new(2, 0)).await;
+        println!("Tirta's Komputer: done 3!");
+    });
+
+    println!("Tirta's Komputer: hey hey!");
+
+    //drop(spawner);
 
     executor.run();
 }
