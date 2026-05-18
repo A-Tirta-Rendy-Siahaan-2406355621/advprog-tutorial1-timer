@@ -98,7 +98,7 @@ fn main() {
         println!("Tirta's Komputer: done 3!");
     });
 
-    println!("Tirta's Komputer: hey hey!");
+    println!("Tirta's Komputer: hey heyy!");
 
     //drop(spawner);
 
